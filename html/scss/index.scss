@@ -1,0 +1,279 @@
+$bgColor:#1c1b20;
+$fontColor01:#bab128;
+$fontColor02:#fff;
+$fontFamily:Microsoft YaHei;
+@mixin setBg($url,$p1,$p2,$s){
+	background:url($url) no-repeat;
+		background:{
+			position:$p1 $p2;
+			size:$s;
+		}
+}
+@mixin font($size,$color,$family,$weight){
+	font-size:$size;
+	color:$color;
+	font-family:$family;
+	font-weight:$weight;
+}
+
+@mixin titles($img,$align){
+	.title{
+	@include setBg($img,left,bottom,100%);
+	h1{text-align:$align;}	
+	}
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	min-width:320px;
+}
+.resume{
+	background:$bgColor;
+	width:100%;
+}
+ul{
+	list-style:none;
+}
+.header{
+	margin:0 auto;
+	width:100%;
+	img{
+		width:100%;
+	}
+}
+
+.title{
+	margin-top:32px;
+	@include setBg('../images/top_bg01.png',left,bottom,100%);
+	h1{
+		@include font(20px,$fontColor01,$fontFamily,normal);
+		line-height:60px;
+	}
+}
+
+
+
+.main{
+	width:94%;
+	margin:0 auto;
+	.aboutMe{
+		.title{
+			margin-top:10px;
+		}
+		.content{
+			width:100%;
+			display:flex;
+			justify-content: space-between;
+			line-height:46px;
+
+			.head{
+				width:30%;
+				img{
+					width:68%;
+					display:block;
+					margin:0 auto;
+					border-radius:50%;
+					border:2px solid $fontColor01;
+					margin-top:48px;
+				}
+			}
+			.info01{
+				width:20%;
+				margin-top:36px;
+
+			}
+			.info02{
+				width:40%;
+				margin-top:36px;
+			}
+
+			li{
+				@include font(16px,$fontColor02,$fontFamily,normal);
+				img{
+					vertical-align:middle;
+					margin-right:14px;
+				}
+			}
+		}
+	}
+
+	.skill{
+		@include titles("../images/top_bg02.png",right);
+		.content{
+			width:100%;
+			margin-top:32px;
+			ul{
+				display:flex;
+				justify-content: space-between;
+				li{
+					width:25%;
+					text-align:center;
+					span{
+						display:block;
+						width:100%;
+						text-align:center;
+						@include font(22px,$fontColor01,$fontFamily,normal);
+						margin-top:22px;
+					}
+				}
+			}
+		}
+	}
+	.hobby{
+		@extend .skill;
+		@include titles("../images/top_bg01.png",left);
+	}
+	.experience{
+		@include titles("../images/top_bg02.png",right);
+		.content{
+			.top{
+				margin-top:22px;
+				h2{
+					@include font(28px,$fontColor02,$fontFamily,normal);
+					text-align:center;
+					i{
+						display:inline-block;
+						width:24px;
+						height:24px;
+						margin:0 5px;
+						@include setBg('../images/circle.png',left,top,100% 100%);
+					}
+				}
+			}
+			.details{
+				.item{
+					margin-top:20px;
+					display:flex;
+					font-size:16px;
+					color:#fff;
+					.left{
+						width:30%;
+						height:150px;
+						border-right:1px dashed #f4ea29;
+						position:relative;
+						text-align:right;
+						padding-right:20px;
+						box-sizing:border-box;
+						&::after{
+							content:"";
+							display:block;
+							width:20px;
+							height:20px;
+							background:url('../images/circle_qq.png') no-repeat;
+							background-size:100% 100%;
+							position: absolute;
+						    bottom: -20px;
+						    right: -10px;
+						}
+					}
+					.right{
+						padding-left:20px;
+						flex:1;
+						p{
+							line-height:36px;
+						}
+					}
+				}
+			}
+			
+		}
+		
+	}
+	
+	// 评价
+	.evaluation{
+		@include titles("../images/top_bg01.png",left);
+		.content{
+
+		}
+	}
+}
+
+.footer{
+	margin:0 auto;
+	width:100%;
+	margin-top:40px;
+	background:#3a3a3a;
+	overflow:hidden;
+	padding:36px;
+	box-sizing:border-box;
+	span{
+		display:block;
+		text-align:center;
+		@include font(68px,$fontColor01,$fontFamily,bold);
+		font-style:italic;
+	}
+	i{
+		float:right;
+		@include font(18px,$fontColor01,$fontFamily,normal);
+	}
+}
+
+
+//大于1080px
+@media screen and (min-width:1080px) {
+	.resume{
+		width:1080px;
+		margin:0 auto;
+	}
+}
+
+
+//375 - 679 
+@media screen and (min-width:375px) and (max-width:679px) {
+	.main{
+		.aboutMe{
+			.content{
+				display:block;
+				.head{
+					margin:0 auto;
+				}
+				.info01,.info02{
+					display:inline-block;
+				}
+				.info01{
+					width:38%;
+				}
+				.info02{
+					width:60%;
+				}
+			}
+		}
+	}
+}
+
+//小于375屏幕
+@media screen and (max-width:374px) {
+	.main{
+		.aboutMe{
+			.content{
+				display:block;
+				.head{
+					margin:0 auto;
+				}
+				.info01,.info02{
+					width:70%;
+					margin-left:10px;
+					margin-top:0px;
+				}
+			}
+		}
+		.skill{
+			.content{
+				ul{
+					li{
+						img{
+							width:30px;
+						}
+						span{
+							font-size:18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

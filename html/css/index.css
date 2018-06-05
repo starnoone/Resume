@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  min-width: 320px; }
+
+.resume {
+  background: #1c1b20;
+  width: 100%; }
+
+ul {
+  list-style: none; }
+
+.header {
+  margin: 0 auto;
+  width: 100%; }
+  .header img {
+    width: 100%; }
+
+.title {
+  margin-top: 32px;
+  background: url("../images/top_bg01.png") no-repeat;
+  background-position: left bottom;
+  background-size: 100%; }
+  .title h1 {
+    font-size: 20px;
+    color: #bab128;
+    font-family: Microsoft YaHei;
+    font-weight: normal;
+    line-height: 60px; }
+
+.main {
+  width: 94%;
+  margin: 0 auto; }
+  .main .aboutMe .title {
+    margin-top: 10px; }
+  .main .aboutMe .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 46px; }
+    .main .aboutMe .content .head {
+      width: 30%; }
+      .main .aboutMe .content .head img {
+        width: 68%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 2px solid #bab128;
+        margin-top: 48px; }
+    .main .aboutMe .content .info01 {
+      width: 20%;
+      margin-top: 36px; }
+    .main .aboutMe .content .info02 {
+      width: 40%;
+      margin-top: 36px; }
+    .main .aboutMe .content li {
+      font-size: 16px;
+      color: #fff;
+      font-family: Microsoft YaHei;
+      font-weight: normal; }
+      .main .aboutMe .content li img {
+        vertical-align: middle;
+        margin-right: 14px; }
+  .main .skill .title, .main .hobby .title {
+    background: url("../images/top_bg02.png") no-repeat;
+    background-position: left bottom;
+    background-size: 100%; }
+    .main .skill .title h1, .main .hobby .title h1 {
+      text-align: right; }
+  .main .skill .content, .main .hobby .content {
+    width: 100%;
+    margin-top: 32px; }
+    .main .skill .content ul, .main .hobby .content ul {
+      display: flex;
+      justify-content: space-between; }
+      .main .skill .content ul li, .main .hobby .content ul li {
+        width: 25%;
+        text-align: center; }
+        .main .skill .content ul li span, .main .hobby .content ul li span {
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: 22px;
+          color: #bab128;
+          font-family: Microsoft YaHei;
+          font-weight: normal;
+          margin-top: 22px; }
+  .main .hobby .title {
+    background: url("../images/top_bg01.png") no-repeat;
+    background-position: left bottom;
+    background-size: 100%; }
+    .main .hobby .title h1 {
+      text-align: left; }
+  .main .experience .title {
+    background: url("../images/top_bg02.png") no-repeat;
+    background-position: left bottom;
+    background-size: 100%; }
+    .main .experience .title h1 {
+      text-align: right; }
+  .main .experience .content .top {
+    margin-top: 22px; }
+    .main .experience .content .top h2 {
+      font-size: 28px;
+      color: #fff;
+      font-family: Microsoft YaHei;
+      font-weight: normal;
+      text-align: center; }
+      .main .experience .content .top h2 i {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 0 5px;
+        background: url("../images/circle.png") no-repeat;
+        background-position: left top;
+        background-size: 100% 100%; }
+  .main .experience .content .details .item {
+    margin-top: 20px;
+    display: flex;
+    font-size: 16px;
+    color: #fff; }
+    .main .experience .content .details .item .left {
+      width: 30%;
+      height: 150px;
+      border-right: 1px dashed #f4ea29;
+      position: relative;
+      text-align: right;
+      padding-right: 20px;
+      box-sizing: border-box; }
+      .main .experience .content .details .item .left::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url("../images/circle_qq.png") no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: -20px;
+        right: -10px; }
+    .main .experience .content .details .item .right {
+      padding-left: 20px;
+      flex: 1; }
+      .main .experience .content .details .item .right p {
+        line-height: 36px; }
+  .main .evaluation .title {
+    background: url("../images/top_bg01.png") no-repeat;
+    background-position: left bottom;
+    background-size: 100%; }
+    .main .evaluation .title h1 {
+      text-align: left; }
+
+.footer {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 40px;
+  background: #3a3a3a;
+  overflow: hidden;
+  padding: 36px;
+  box-sizing: border-box; }
+  .footer span {
+    display: block;
+    text-align: center;
+    font-size: 68px;
+    color: #bab128;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    font-style: italic; }
+  .footer i {
+    float: right;
+    font-size: 18px;
+    color: #bab128;
+    font-family: Microsoft YaHei;
+    font-weight: normal; }
+
+@media screen and (min-width: 1080px) {
+  .resume {
+    width: 1080px;
+    margin: 0 auto; } }
+@media screen and (min-width: 375px) and (max-width: 679px) {
+  .main .aboutMe .content {
+    display: block; }
+    .main .aboutMe .content .head {
+      margin: 0 auto; }
+    .main .aboutMe .content .info01, .main .aboutMe .content .info02 {
+      display: inline-block; }
+    .main .aboutMe .content .info01 {
+      width: 38%; }
+    .main .aboutMe .content .info02 {
+      width: 60%; } }
+@media screen and (max-width: 374px) {
+  .main .aboutMe .content {
+    display: block; }
+    .main .aboutMe .content .head {
+      margin: 0 auto; }
+    .main .aboutMe .content .info01, .main .aboutMe .content .info02 {
+      width: 70%;
+      margin-left: 10px;
+      margin-top: 0px; }
+  .main .skill .content ul li img, .main .hobby .content ul li img {
+    width: 30px; }
+  .main .skill .content ul li span, .main .hobby .content ul li span {
+    font-size: 18px; } }
+
+/*# sourceMappingURL=index.css.map */
